@@ -1,5 +1,5 @@
-{% set version = "1.0.0" %}
-{% set build = 1 %}
+{% set version = "1.0.1" %}
+{% set build = 0 %}
 
 package:
   name: scikit-bio-binaries
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scikit-bio/scikit-bio-binaries/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 471621be0e89a887c799adad8dc31671305637aff60a7370954a2e086c7f209d
+  sha256: e1e5f44b3457b22e5349a31b392896ddbe8901f012ae055ea5b7f2f2a9731227
 
 build:
   number: {{ build }}
