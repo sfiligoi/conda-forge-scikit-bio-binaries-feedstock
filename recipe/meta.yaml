@@ -18,9 +18,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - llvm-openmp    # [osx]
-    - libgomp        # [linux]
-    - cuda-compiler  # [linux and x86_64]
+    - {{ compiler("cuda") }}  # [linux and x86_64]
+    - cuda-nvcc               # [linux and x86_64]
+    - cuda-toolkit            # [linux and x86_64]
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
     - make
     - blas-devel
   host:
