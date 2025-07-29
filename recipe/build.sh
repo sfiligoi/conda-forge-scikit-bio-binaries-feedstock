@@ -1,5 +1,17 @@
 #!/bin/bash
 
+if [ "x${build_alias}" != "x" ]; then
+if [ "x${build_alias}" == "x${host_alias}" ]; then
+if [ "x`uname -m`" == "xx86_64" ]; then
+   # only supporting GPU compilation on x86 platforms
+   # when not cross compiling
+
+   echo "Enabling GPU build"
+   export NV_CUDA=Y
+fi
+fi
+fi
+
 echo "=== make all ==="
 make all
 if [ $? -ne 0 ]
