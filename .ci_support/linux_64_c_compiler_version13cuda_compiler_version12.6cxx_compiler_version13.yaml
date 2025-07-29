@@ -12,6 +12,10 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+cuda_compiler:
+- cuda-nvcc
+cuda_compiler_version:
+- '12.6'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -27,3 +31,4 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+  - cuda_compiler_version
